@@ -3,10 +3,10 @@ package com.adaloudis;
 import java.util.ArrayList;
 
 class Position {
-    private final double x;
-    private final double y;
+    private double x;
+    private double y;
 
-    public Position(float x, float y) {
+    Position(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -15,17 +15,22 @@ class Position {
         return Math.sqrt(Math.pow(p.x, 2) + Math.pow(p.y, 2));
     }
 
-    Position getNearestDestination(ArrayList<Position> destinations) {
-        Position nearestDestination = destinations.get(0);
-        double nearestDistance = getDistance(nearestDestination);
-        for (int i = 1; i < destinations.size(); i++) {
-            Position newDestination = destinations.get(i);
-            double newDistance = getDistance(newDestination);
-            if (newDistance < nearestDistance) {
-                nearestDestination = newDestination;
-                nearestDistance = newDistance;
-            }
-        }
-        return nearestDestination;
+    double getX() {
+        return this.x;
     }
+    double getY () {
+        return this.y;
+    }
+
+    void setX(double X) {
+        this.x = X;
+    }
+    void setY (double Y) {
+        this.y = Y;
+    }
+
+
+
+
+
 }
