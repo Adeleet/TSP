@@ -1,3 +1,5 @@
+package com.adaloudis;
+
 import java.util.ArrayList;
 
 class Position {
