@@ -18,7 +18,7 @@ class Position {
     double getX() {
         return this.x;
     }
-    double getY () {
+    double getY() {
         return this.y;
     }
 
